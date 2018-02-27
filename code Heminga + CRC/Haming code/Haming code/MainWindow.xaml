@@ -1,0 +1,27 @@
+﻿<Window x:Class="Haming_code.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Haming_code"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="352.333" Width="525">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="0,0,-0.333,-11.333">
+            <StackPanel Orientation="Vertical" Width="333" Margin="10,20,10,9.667">
+                <Label Margin="120,0,1.333,0" Content="DIRECT CODING"/>
+                <TextBox x:Name="in_str_dir" Margin="5"/>
+                <Button x:Name="direct_coding" Click="direct_coding_Click" Content="Encode" Margin="5"/>
+                <TextBox x:Name="str_bit_dir" Margin="5"/>
+                <TextBox x:Name="out_str_dir" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="93,0,92.667,10">
+                <Label Content="REVERSE CODING" Margin="120, 0, 0, 0"/>
+                <TextBox x:Name="in_str_rvrs" Margin="5"/>
+                <Button x:Name="reverse_coding" Click="reverse_coding_Click" Content="Decode" Margin="5"/>
+                <TextBlock x:Name="str_bit_rvrs" Margin="5"/>
+                <TextBlock x:Name="out_str_rvrs" Margin="5"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

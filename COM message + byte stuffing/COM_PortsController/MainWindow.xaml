@@ -1,0 +1,47 @@
+﻿<Window x:Class="COM_PortsController.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:COM_PortsController"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Name="Port_Enable" Margin="10" HorizontalAlignment="Center">Port unavailable</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10">Select COM port</TextBlock>
+                <ComboBox x:Name="ComList" Margin="10" Width="100">
+                    <ComboBoxItem>COM1</ComboBoxItem>
+                    <ComboBoxItem>COM2</ComboBoxItem>
+                </ComboBox> 
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10">Speed of ports (bods)</TextBlock>
+                <TextBlock Margin="15 10 0 0">50</TextBlock>
+                <Slider x:Name="speed_slider" Maximum="115200" Minimum="50" Width="120" Margin="10"/>
+                <TextBlock Margin="0 10 ">115 200</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="button_Port_on" Content="Port on" Margin="100 10 0 10" Width="150" Click="button_Port_on_Click"/>
+                <Button x:Name="button_Port_off" Content="Port off" IsEnabled="False" Margin="20 10 0 10" Width="150" Click="button_Port_off_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10">Message out</TextBlock>
+                <TextBox Name="message_out" Width="227" Margin="10" IsEnabled="False"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10">Message in</TextBlock>
+                <TextBlock x:Name="message_in" Margin="20 10" Width="120" IsEnabled="False">Null</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10">Message to</TextBlock>
+                <ComboBox x:Name="MessageTo" Margin="10" Width="100">
+                    <ComboBoxItem>COM1</ComboBoxItem>
+                    <ComboBoxItem>COM2</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <Button x:Name="button_MessageSend" Content="Send Message" Margin="150 10" Click="button_MessageSend_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
